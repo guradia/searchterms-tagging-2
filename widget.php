@@ -76,8 +76,8 @@ function popular_terms_control()
 }
 function popular_terms_init()
 {
-  register_sidebar_widget( 'Popular Search Terms', 'widget_popular_terms');
-  register_widget_control( 'Popular Search Terms', 'popular_terms_control', 300, 200 );    
+    wp_register_sidebar_widget('st2-ps', 'Popular Search Terms', 'widget_popular_terms');
+    wp_register_widget_control('st2-ps', 'Popular Search Terms', 'popular_terms_control', 300, 200);
 }
 add_action('plugins_loaded', 'popular_terms_init');
 /**
@@ -153,8 +153,8 @@ function recent_terms_control()
 }
 function recent_terms_init()
 {
-  register_sidebar_widget( 'Recent Search Terms', 'widget_recent_terms');
-  register_widget_control( 'Recent Search Terms', 'recent_terms_control', 300, 200 );    
+    wp_register_sidebar_widget('st2-rs', 'Recent Search Terms', 'widget_recent_terms');
+    wp_register_widget_control('st2-rs', 'Recent Search Terms', 'recent_terms_control', 300, 200);
 }
 add_action('plugins_loaded', 'recent_terms_init');
 /**
@@ -232,8 +232,8 @@ function popular_terms_cat_control()
 }
 function popular_terms_cat_init()
 {
-  register_sidebar_widget( 'Popular Terms in Category', 'widget_popular_terms_cat');
-  register_widget_control( 'Popular Terms in Category', 'popular_terms_cat_control', 300, 200 );    
+    wp_register_sidebar_widget('st2-psc', 'Popular Terms in Category', 'widget_popular_terms_cat');
+    wp_register_widget_control('st2-psc', 'Popular Terms in Category', 'popular_terms_cat_control', 300, 200);
 }
 add_action('plugins_loaded', 'popular_terms_cat_init');
 /**
@@ -316,8 +316,8 @@ function pk_random_terms_control()
 }
 function pk_random_terms_init()
 {
-  register_sidebar_widget( 'Random Search Terms', 'pk_widget_random_terms');
-  register_widget_control( 'Random Search Terms', 'pk_random_terms_control', 300, 200 );    
+    wp_register_sidebar_widget('st2-rand', 'Random Search Terms', 'pk_widget_random_terms');
+    wp_register_widget_control('st2-rand', 'Random Search Terms', 'pk_random_terms_control', 300, 200);
 }
 add_action('plugins_loaded', 'pk_random_terms_init');
 /*--------- MAIN FUNCTION FOR WIDGET ----- */
